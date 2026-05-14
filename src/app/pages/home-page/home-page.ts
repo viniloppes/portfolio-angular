@@ -41,7 +41,7 @@ export class HomePage implements OnInit {
     this.users = [
       { id: 0, name: 'SPA Beauty Clinic', image: '', role: 'Admin', href: 'https://ednalopesestetica.com.br/inicio' },
       { id: 1, name: 'SPA Beauty Clinic - Mothers Day', image: '', role: 'Admin', href: 'https://ednalopesestetica.com.br/diadasmaes' },
-      { id: 2, name: 'Flash Cards App', image: '', role: 'Admin', href: 'https://viniloppes.github.io/FlashcardsApp/decks' },
+      { id: 2, name: 'Flash Cards App', image: '', role: 'Admin', href: 'https://viniloppes.github.io/FlashcardsApp' },
       { id: 3, name: 'Fruit Ninja', image: '', role: 'Admin', href: 'https://viniloppes.github.io/unity-fruit-ninja-web-build/' },
       { id: 4, name: 'SPA Beauty Clinic - Post Partum', image: '', role: 'Admin', href: 'https://viniloppes.github.io/SPA_EDNA_LOPES_AB_SEM_DIASTASE/' },
     ];

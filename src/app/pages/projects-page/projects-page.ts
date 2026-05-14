@@ -3,6 +3,7 @@ import { Component, inject, signal } from '@angular/core';
 import { DataView } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { Tag } from 'primeng/tag';
+import { CardModule } from 'primeng/card';
 import { CommonModule } from '@angular/common';
 import { Project, projects } from './projects';
 
@@ -20,7 +21,7 @@ interface Product {
 }
 @Component({
   selector: 'app-projects-page',
-  imports: [DataView, ButtonModule, Tag, CommonModule],
+  imports: [DataView, ButtonModule, Tag, CommonModule, CardModule],
   templateUrl: './projects-page.html',
   styleUrl: './projects-page.css',
 })
@@ -50,6 +51,10 @@ export class ProjectsPage {
         return null;
     }
   }
+  openUrl(url: string) {
+    console.log(url);
 
+    window.open(url, '_blank');
+  }
 }
 

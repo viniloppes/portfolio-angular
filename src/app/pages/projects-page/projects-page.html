@@ -1,30 +1,40 @@
-<div class="card ">
+<div class="space-y-2 text-center px-4">
+    <div class=" space-y-5 mt-3">
+        <p class="font-medium  text-5xl">Projects</p>
+
+
+    </div>
+
+</div>
+<p-card class="container  mx-auto mt-5">
     <p-dataview #dv [value]="projects">
         <ng-template #list let-items>
-            <div class="grid grid-cols-12 gap-4 grid-nogutter dark:bg-gray-800 ring-gray-900/5">
+
+            <div class="grid grid-cols-12 gap-4 grid-nogutter">
                 <div class="col-span-12" *ngFor="let item of items; let first = first">
+
                     <div class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
                         [ngClass]="{ 'border-t border-surface-200 dark:border-surface-700': !first }">
                         <div class="md:w-40 relative">
                             <img class="block xl:block mx-auto rounded-border w-full"
-                                [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image"
-                                [alt]="item.name" />
+                                [src]="'assets/projects/' + item.image" [alt]="item.name" />
 
                         </div>
                         <div class="flex flex-col md:flex-row justify-between md:items-center flex-1 gap-6">
                             <div class="flex flex-row md:flex-col justify-between items-start gap-2">
                                 <div>
-                                    <div class="flex  gap-2">
-                                        @for (tag of item.tags; track $index) {
-                                        <p-tag [value]="tag" [severity]="'success'" class="dark:bg-" />
-                                        }
-                                    </div>
+
 
                                     <span class="font-medium text-secondary text-sm">{{ item.category }}</span>
                                     <div class="text-lg font-medium mt-2 text-gray-900 dark:text-gray-100">{{
                                         item.name }}</div>
                                     <div class="text-md font-medium mt-2 text-gray-700 dark:text-gray-300">{{
                                         item.description }}</div>
+                                    <div class="flex  gap-2">
+                                        @for (tag of item.tags; track $index) {
+                                        <p-tag [value]="tag" severity="info" />
+                                        }
+                                    </div>
                                 </div>
 
                             </div>
@@ -38,9 +48,18 @@
                                 </div>
                             </div> -->
                         </div>
+                        <div class="flex flex-col md:items-end gap-8">
+
+                            <div class="flex flex-row-reverse md:flex-row gap-2">
+                                <button pButton class="p-button-sm p-button-secondary" (click)="openUrl(item.url)">
+                                    <i class="pi pi-external-link !text-[10px]" pButtonIcon></i>
+                                    <span pButtonLabel>Visit solution</span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </ng-template>
     </p-dataview>
-</div>
+</p-card>

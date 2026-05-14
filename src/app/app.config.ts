@@ -115,7 +115,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), provideClientHydration(withEventReplay()),
     providePrimeNG({
       theme: {
-        preset: MyPreset,
+        preset: Aura,
         options: {
           darkModeSelector: '.my-app-dark',
 

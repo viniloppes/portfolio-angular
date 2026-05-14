@@ -1,10 +1,10 @@
-<div class="flex flex-wrap  justify-center md:justify-between">
-    <div class="basis-3/3 md:basis-1/3 flex align-center justify-center">
+<div class="flex flex-wrap  justify-center md:justify-between container mx-auto">
+    <div class="basis-3/3 md:basis-1/3 flex align-center justify-center ">
         <p class="text-lg font-semibold my-auto">Vinicius Lopes de Azevedo</p>
 
     </div>
     <div class="basis-2/3">
-        <nav class="flex justify-center space-x-1 mt-2 text-xs sm:text-sm md:text-base ">
+        <nav class="flex justify-center md:justify-end  space-x-1 mt-2 text-xs sm:text-sm md:text-base ">
             <a href="/home" class="font-bold rounded-lg px-3 py-2 text-white-700 hover:bg-gray-100 hover:text-gray-900">
                 Home
             </a><span class="my-auto">/</span>
@@ -20,7 +20,8 @@
                 class="font-bold rounded-lg px-3 py-2 text-white-700 hover:bg-gray-100 hover:text-gray-900">
                 Contact
             </a>
-            <button pButton (click)="toggleDarkMode()" [severity]="isDark ? 'secondary' : 'primary'">
+            <button pButton (click)="toggleDarkMode()" class="p-button-outlined p-button-xs m-1"
+                [severity]="isDark ? 'contrast' : 'secondary'">
                 <i [class]="isDark ? 'pi pi-sun' : 'pi pi-moon'"></i>
             </button>
             <!-- <p-button label="Toggle Dark Mode" (onClick)="toggleDarkMode()" /> -->
