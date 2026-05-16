@@ -33,8 +33,7 @@ jobs:
       - name: Build
         run: |
           npx ng build --base-href /portfolio-angular/
-          cp dist/portfolio/browser/index.csr.html dist/portfolio/browser/index.html || true
-          cp dist/portfolio/browser/index.csr.html dist/portfolio/browser/404.html || true
+          cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
