@@ -1,4 +1,5 @@
 import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { MenubarModule } from 'primeng/menubar';
 import { MENU_ITEMS } from '../menu';
@@ -13,7 +14,7 @@ import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-topbar-menu',
-  imports: [MenubarModule, TooltipModule, DockModule, ButtonModule, InputTextModule, AvatarModule, BadgeModule, CommonModule, RippleModule],
+  imports: [MenubarModule, TooltipModule, DockModule, ButtonModule, InputTextModule, AvatarModule, BadgeModule, CommonModule, RippleModule, RouterModule],
   templateUrl: './topbar-menu.html',
   styleUrl: './topbar-menu.css',
 })
